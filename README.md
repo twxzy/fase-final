@@ -1,73 +1,43 @@
-# Welcome to your Lovable project
+# Checklist de Correções e Melhorias - PremiumImóveis
 
-## Project info
+Este documento lista todos os bugs, melhorias de UX e refatorações de código que foram identificadas e implementadas no projeto.
 
-**URL**: https://lovable.dev/projects/538488a0-d7f0-4a31-8517-1ea9f7027494
+---
 
-## How can I edit this code?
+## Geral (Experiência do Usuário)
 
-There are several ways of editing your application.
+- [x] **Rolagem da Página:** Navegação entre seções da página era instantânea.
+- [x] **Rolagem do Menu Mobile:** A página principal continuava rolando no fundo com o menu mobile aberto.
 
-**Use Lovable**
+---
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/538488a0-d7f0-4a31-8517-1ea9f7027494) and start prompting.
+## Header
 
-Changes made via Lovable will be committed automatically to this repo.
+- [x] **Responsividade:** O menu de navegação principal desaparecia em telas pequenas sem uma alternativa.
+- [x] **Alinhamento do Menu Mobile:** Os itens de navegação no menu hambúrguer estavam alinhados à esquerda.
+- [x] **Funcionalidade do Menu Mobile:** O menu não fechava automaticamente ao clicar em um dos links.
+- [ ] **Navegação por Âncora (Menu Mobile):** Links do menu (ex: "Contato") não rolam a página para a seção correspondente.
+  - **Status:** Problema identificado. A causa provável é a falta de `id`s correspondentes nas seções de destino. A correção requer a revisão de múltiplos componentes para adicionar os `id`s necessários.
 
-**Use your preferred IDE**
+---
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Hero Section
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- [x] **Layout (Header Fixo):** O conteúdo da seção "Hero" estava começando por baixo do cabeçalho fixo.
+- [x] **Layout (Sobreposição):** O card de busca estava sobrepondo os textos de "Indicadores de Confiança".
+- [x] **Animação de Scroll:** A animação de "pulo" do indicador de scroll era muito agressiva.
 
-Follow these steps:
+---
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## Formulário de Busca (`PropertySearch`)
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- [x] **Layout dos Botões (Responsividade):** O botão "Filtros Avançados" era cortado em telas pequenas.
+- [x] **Layout dos Botões (Mobile):** O botão "Buscar Imóveis" ficava com largura pequena no celular.
+- [x] **Acessibilidade:** As `labels` dos campos de busca não estavam conectadas aos `inputs`.
+- [x] **Visual do Card (Desfoque):** O card de busca possuía um efeito de desfoque de fundo que foi verificado.
 
-# Step 3: Install the necessary dependencies.
-npm i
+---
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## Footer
 
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/538488a0-d7f0-4a31-8517-1ea9f7027494) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+- [x] **Layout (Alinhamento):** O conteúdo do rodapé estava "descentralizado" no celular.
